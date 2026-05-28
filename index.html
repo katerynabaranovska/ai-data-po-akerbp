@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oil Rig Snake - Retro Arcade</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- CRT Scanlines Overlay -->
+        <div class="scanlines"></div>
+
+        <!-- Header Section -->
+        <header class="header">
+            <h1 class="title">OIL RIG TERMINAL</h1>
+            <div class="notice-box">
+                <p class="notice-text">
+                    På grunn av konfidensialitetskrav fra mine arbeidsgivere kan jeg ikke dele prosjektdetaljer eller intern dokumentasjon offentlig. Beskrivelse av relevant erfaring og arbeidsoppgaver finnes i søknadsbrevet mitt.
+                </p>
+            </div>
+        </header>
+
+        <!-- Game Section -->
+        <section class="game-section">
+            <div class="game-wrapper">
+                <div class="game-info">
+                    <div class="info-box">
+                        <span class="label">SCORE:</span>
+                        <span class="value" id="score">0</span>
+                    </div>
+                    <div class="info-box">
+                        <span class="label">LEVEL:</span>
+                        <span class="value" id="level">1</span>
+                    </div>
+                </div>
+
+                <canvas id="gameCanvas" width="400" height="400"></canvas>
+
+                <div class="game-controls">
+                    <button id="startBtn" class="btn btn-start">START GAME</button>
+                    <button id="restartBtn" class="btn btn-restart" style="display:none;">RESTART</button>
+                </div>
+
+                <div class="game-status" id="gameStatus" style="display:none;">
+                    <div class="status-message" id="statusMessage">GAME OVER</div>
+                    <div class="final-score" id="finalScore">Final Score: 0</div>
+                </div>
+            </div>
+
+            <div class="controls-info">
+                <h3>CONTROLS</h3>
+                <p>↑ ↓ ← → or W A S D</p>
+                <p>SPACEBAR to PAUSE</p>
+            </div>
+        </section>
+
+        <!-- Legend Section -->
+        <section class="legend">
+            <div class="legend-item oil-barrel">
+                <div class="legend-icon barrel"></div>
+                <span>Oil Barrel</span>
+            </div>
+            <div class="legend-item oil-tower">
+                <div class="legend-icon tower"></div>
+                <span>Oil Tower</span>
+            </div>
+            <div class="legend-item fuel-can">
+                <div class="legend-icon can"></div>
+                <span>Fuel Can</span>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
